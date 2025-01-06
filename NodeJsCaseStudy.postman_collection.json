@@ -1,0 +1,99 @@
+{
+	"info": {
+		"_postman_id": "af961882-0272-4754-8c63-856c884de215",
+		"name": "NodeJsCaseStudy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "welcome",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/doctor"
+			},
+			"response": []
+		},
+		{
+			"name": "display doctor",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/doctor/displayDoctors"
+			},
+			"response": []
+		},
+		{
+			"name": "display doctor by doctor id",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/doctor/5"
+			},
+			"response": []
+		},
+		{
+			"name": "create doctor",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"first_name\": \"Subham\",\r\n    \"last_name\": \"Singh\",\r\n    \"age\": 52,\r\n    \"gender\": \"M\",\r\n    \"speciality\": \"pediatric\",\r\n    \"doj\": \"2016-01-01\",\r\n    \"dob\": \"1997-01-01\",\r\n    \"salary\": 100000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/doctor/createDoctor"
+			},
+			"response": []
+		},
+		{
+			"name": "update doctor salary",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"salary\": 240000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/doctor/5"
+			},
+			"response": []
+		},
+		{
+			"name": "delete doctor",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8080/doctor/5"
+			},
+			"response": []
+		}
+	]
+}
